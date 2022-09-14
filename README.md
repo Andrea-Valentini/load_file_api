@@ -1,6 +1,6 @@
 # Overview
 
-A simple Tornado backend that provides an API endpoint to receive pdf files and to stores files metadata (filename and upload date) into a Postgres database.
+A simple Tornado backend that provides an API endpoint receiving pdf files and storing files metadata (filename and upload date) into a Postgres database.
 
 ## Local Deployment
 
@@ -13,7 +13,7 @@ cd load_file_api
 ```
 
 To set up the environment, copy .env_file in the current folder.
-Then run the following commands
+Then run the following command
 
 ```bash
 docker-compose --env-file .env_file up
