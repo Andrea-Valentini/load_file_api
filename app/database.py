@@ -49,6 +49,6 @@ class DataBase:
             logging.info("Updating database ...")
             self.cursor.execute(insert_command, (new_metadata.filename, new_metadata.upload_date))
             self.connection.commit()
-        except: # pylint: disable= bare-except
-            logging.error("An error has occurred during the database updating ...")
+        except Exception as error:
+            logging.error(f"The following error has occurred during the database updating: {error}")
             self.connection.rollback()
